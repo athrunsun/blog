@@ -1,5 +1,5 @@
 ---
-title: (Rep) How Rooting Works -- A Technical Explanation of the Android Rooting Process
+title: (Reproduce) How Rooting Works -- A Technical Explanation of the Android Rooting Process
 date: 2016/02/13 17:28
 categories: Android
 ---

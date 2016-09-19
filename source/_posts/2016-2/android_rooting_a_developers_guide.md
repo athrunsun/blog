@@ -1,5 +1,5 @@
 ---
-title: "(Rep) Android Rooting: A Developer's Guide"
+title: "(Reproduce) Android Rooting: A Developer's Guide"
 date: 2016/02/13 17:30
 categories: Android
 ---

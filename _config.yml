@@ -4,8 +4,9 @@
 
 # Site
 title: Do It The Geek Way
-subtitle:
-description:
+subtitle: Geek or Die
+description: 无可救药的声优控
+keywords: geek
 author: Bruce Sun
 language: en
 timezone: Asia/Shanghai
@@ -13,7 +14,7 @@ timezone: Asia/Shanghai
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://athrunsun.github.io/blog
-root: /blog/
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -63,10 +64,35 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
-#theme: NexT
+#theme: landscape
+theme: indigo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# RSS
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true

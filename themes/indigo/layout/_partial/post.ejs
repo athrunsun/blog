@@ -35,8 +35,8 @@
             
             <blockquote>
                 <p>
-                本文地址：
-                <a href="<%- page.permalink%>" target="_blank" rel="external"><%- page.permalink %></a>
+                Permalink to this article：
+                <a href="<%- url_for(page.path)%>" target="_blank" rel="external"><%- config.url + page.path %></a>
                 </p>
                 <footer><cite><a href="<%- config.url %>">@<%- config.title %></a></cite></footer>
             </blockquote>

@@ -1,5 +1,5 @@
 ---
-title: (Rep) Difference between system testing and end to end testing?
+title: (Reproduce) Difference between system testing and end to end testing?
 date: 2016/02/16 16:25
 categories: Testing
 ---

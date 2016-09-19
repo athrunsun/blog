@@ -9,41 +9,46 @@
 #    target: _blank    是否跳出，省略则在当前页面打开
 menu:
   home:
-    text: 主页
+    text: Home
     url: /
   archives:
     url: /archives
   tags:
     url: /tags
   github:
-    url: https://github.com/yscoder
+    url: https://github.com/athrunsun
     target: _blank
   weibo:
-    url: http://www.weibo.com/ysweb
+    url: http://weibo.com/okampfer
     target: _blank
-  link:
-    text: 测试
-    url: /404
+  stack-overflow:
+    text: bruce-sun
+    url: http://stackoverflow.com/users/1239295/bruce-sun
+    target: _blank
+  linkedin-square:
+    text: okampfer
+    url: http://www.linkedin.com/in/okampfer
+    target: _blank
 
 rss: /atom.xml
 
 #你的头像url
-avatar: /img/logo.jpg
+avatar: /img/athrun-logo.png
 
 # email
-email: 634206017@qq.com
+email: okampfer@gmail.com
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#3F51B5'
 
 # Content
 tags:
-  title: 标签
+  title: Tags
 
 # 文章截断
 excerpt_render: false
 excerpt_length: 200
-excerpt_link: 阅读全文...
+excerpt_link: More...
 mathjax: false
 archive_yearly: true
 
@@ -51,10 +56,7 @@ archive_yearly: true
 share: true
 
 #是否开启打赏，关闭 reward: false
-reward:
-  title: 谢谢大爷~
-  wechat: /img/wechat.jpg     #微信，关闭设为 false
-  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+reward: false
 
 #是否开启搜索
 search: true
@@ -72,7 +74,7 @@ cnzz: false
 
 # Miscellaneous
 google_analytics: ''
-favicon: /favicon.ico
+favicon: /img/athrun-logo.png
 
 # less
 less:
@@ -82,4 +84,4 @@ less:
 
 #是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
 #若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
-duoshuo: ysblog
+duoshuo: false
