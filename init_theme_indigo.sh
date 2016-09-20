@@ -1,6 +1,4 @@
-npm install hexo-renderer-less --save
-npm install hexo-generator-feed --save
-npm install hexo-generator-json-content --save
+npm install hexo-renderer-less hexo-generator-feed hexo-generator-json-content hexo-deployer-git --save
 
 # Enable tags page
 hexo new page tags
