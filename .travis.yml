@@ -1,0 +1,18 @@
+env:
+  global:
+    - GH_REF: github.com/athrunsun/blog.git
+    - secure: "mwKSyhb3vuObbK4MoY1fQk16N6k7jkDYLFRoQQAb011ktp6JGX/7QHXXuEIyGnHEEb7tDpQWSQVKEc5OrumicVHBQQgTm8BOf2Vdx2naTmICG1lsQC4spro+5JUogcTmk70fSYdOtRbBSl4xtrU51+Bvtr0qa4BVs4zqPAxMQC/0UJwxVkGj67YD4qsQSkI7YJJQKxGa/ExKsi9vMmo+Ft5lgVKJYSeEgSCHa/WxBtdGUxmgREpUSvNPGqsfAX78MdXFV40NPcw/zHu9jcyR/73S2gaSSgJFMzkLzQBHamygngQN3ru2Tegd2cPWot1qWC2cd5TL0t4QlKJQ5xS/AFRAfhk/brPLo6hdh5zvkLV/4oO5kAQZvzkcPynceXqX1V4Q941YQYxsKNIjOCCoxmIJPNxl+rtqhcf7I53prPP9vcndBKzCylnzP1Z/vnuPkTi4U/9oDN7AEdf2cXcIZDbxlSevW8a69jdpUzT7gCM0BcLcrFNIpOJ/JAbr7yusZmVfKF5T1nUbP0NalV/CTDfuf8aniG+0ZXmsFBxwqUD1cwvoABclNnOXk7nKh1FTNSzTTUgHd5Ap071pP0PjspZuq02CxJ8s6M37ARH1gVeJLkXFDaMZc7kIxkZpZDqAjvzcPivDX9OV2fZaJZjUPXEjWYD9oAA4cZ2o7vvaOYo="
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+before_script:
+  - git config user.name "okampfer"
+  - git config user.email "okampfer@gmail.com"
+
+script:
+  - hexo clean
+  - hexo generate
+  - hexo deploy
+# E: Build LifeCycle
