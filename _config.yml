@@ -71,7 +71,7 @@ theme: indigo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/athrunsun/blog.git
+  repo: https://athrunsun@github.com/athrunsun/blog.git
   branch: gh-pages
 
 # RSS
