@@ -98,3 +98,5 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
+
+disqus_shortname: okampfer

@@ -7,7 +7,9 @@ tags:
 - CI
 - Travis
 ---
-# Solution #1 [使用 Travis CI 自动更新 GitHub Pages](http://notes.iissnan.com/2016/publishing-github-pages-with-travis-ci/)
+# Solution #1
+Reference: [使用 Travis CI 自动更新 GitHub Pages](http://notes.iissnan.com/2016/publishing-github-pages-with-travis-ci/)
+
 A sample configuration for my personal blog hosted on github pages would be,
 ```yaml
 language: node_js
@@ -49,7 +51,9 @@ But this requires us to install [travis command line client](https://github.com/
 
 NOTE that we're using a **quite** push with `-q` option so that we won't leak our github API token. Also you can remove log permanently from Travis CI's UI once you see unintentional token leakages.
 
-# Solution #2 [How to publish to Github Pages from Travis CI?](http://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci)
+# Solution #2
+Reference: [How to publish to Github Pages from Travis CI?](http://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci)
+
 A simpler solution (global environment variable `GITHUB_API_TOKEN` must be set beforehand in Travis CI's UI),
 ```yaml
 language: node_js
