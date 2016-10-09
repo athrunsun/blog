@@ -1,6 +1,6 @@
 ---
 title: "(Reproduce) What is the difference between a SOCKS proxy and an HTTP proxy?"
-date: 2016-10-05 22:43:00
+date: 2016-10-05 22:43
 categories: Proxy
 tags:
 - Proxy

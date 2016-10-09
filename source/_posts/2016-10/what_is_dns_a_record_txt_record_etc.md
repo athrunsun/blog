@@ -1,6 +1,6 @@
 ---
 title: "(Reproduce) 什么是DNS,A记录,子域名,CNAME别名,MX记录,TXT记录,SRV 记录,TTL值,泛域名(泛解析),域名转向,域名绑定"
-date: 2016-10-05 21:37:55
+date: 2016-10-05 21:37
 categories: DNS
 tags:
 - DNS

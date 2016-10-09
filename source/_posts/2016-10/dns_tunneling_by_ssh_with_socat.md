@@ -1,6 +1,6 @@
 ---
 title: "(Reproduce) DNS (UDP) tunneling by SSH with socat"
-date: 2016-10-05 22:34:55
+date: 2016-10-05 22:34
 categories: DNS
 tags:
 - DNS
