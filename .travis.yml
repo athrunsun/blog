@@ -19,4 +19,4 @@ after_success:
   - git init
   - git add .
   - git -c user.name='travis' -c user.email='travis' commit -m "Update blog $(date +%Y-%m-%d,%H:%M:%S)"
-  - git push -f "https://athrunsun:${GITHUB_API_TOKEN}@github.com/athrunsun/blog.git" master:gh-pages
+  - git push -f -q "https://athrunsun:${GITHUB_API_TOKEN}@github.com/athrunsun/blog.git" master:gh-pages &> /dev/null
