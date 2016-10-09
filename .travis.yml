@@ -3,31 +3,20 @@ language: node_js
 node_js:
   - "6"
 
-env:
-  global:
-    - GH_REF: github.com/athrunsun/blog.git
-    - secure: "mwKSyhb3vuObbK4MoY1fQk16N6k7jkDYLFRoQQAb011ktp6JGX/7QHXXuEIyGnHEEb7tDpQWSQVKEc5OrumicVHBQQgTm8BOf2Vdx2naTmICG1lsQC4spro+5JUogcTmk70fSYdOtRbBSl4xtrU51+Bvtr0qa4BVs4zqPAxMQC/0UJwxVkGj67YD4qsQSkI7YJJQKxGa/ExKsi9vMmo+Ft5lgVKJYSeEgSCHa/WxBtdGUxmgREpUSvNPGqsfAX78MdXFV40NPcw/zHu9jcyR/73S2gaSSgJFMzkLzQBHamygngQN3ru2Tegd2cPWot1qWC2cd5TL0t4QlKJQ5xS/AFRAfhk/brPLo6hdh5zvkLV/4oO5kAQZvzkcPynceXqX1V4Q941YQYxsKNIjOCCoxmIJPNxl+rtqhcf7I53prPP9vcndBKzCylnzP1Z/vnuPkTi4U/9oDN7AEdf2cXcIZDbxlSevW8a69jdpUzT7gCM0BcLcrFNIpOJ/JAbr7yusZmVfKF5T1nUbP0NalV/CTDfuf8aniG+0ZXmsFBxwqUD1cwvoABclNnOXk7nKh1FTNSzTTUgHd5Ap071pP0PjspZuq02CxJ8s6M37ARH1gVeJLkXFDaMZc7kIxkZpZDqAjvzcPivDX9OV2fZaJZjUPXEjWYD9oAA4cZ2o7vvaOYo="
-
 branches:
   only:
   - master
 
-# S: Build Lifecycle
 install:
   - npm install
-
-before_script:
-  - git config --global user.name "okampfer"
-  - git config --global user.email "okampfer@gmail.com"
 
 script:
   - hexo clean
   - hexo generate
 
-after_script:
+after_success:
   - cd public
   - git init
   - git add .
-  - git commit -m "Update blog $(date +%Y-%m-%d,%H:%M:%S)"
-  - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
-# E: Build LifeCycle
+  - git -c user.name='travis' -c user.email='travis' commit -m init
+  - git push -f -q https://athrunsun:$GITHUB_API_KEY@github.com/athrunsun/blog master:gh-pages &2>/dev/null
