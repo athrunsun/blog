@@ -1,13 +1,13 @@
 ---
 title: "(Reproduce) Merging vs. Rebasing"
-date: 2016/10/03 23:45
+date: 2016-12-19 16:00
 categories: Git
 tags:
 - Git
 ---
 [Original Post](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
-{% title.svg %}
+{% asset_img header.svg "Header" %}
 
 # Merging vs. Rebasing
 
@@ -19,7 +19,7 @@ The first thing to understand about `git rebase` is that it solves the same prob
 
 Consider what happens when you start working on a new feature in a dedicated branch, then another team member updates the master branch with new commits. This results in a forked history, which should be familiar to anyone who has used Git as a collaboration tool.
 
-{% asset_img a_forked_commit_history.svg "A forked commit history" %}
+{% asset_img asset_img a_forked_commit_history.svg "A forked commit history" %}
 
 Now, let’s say that the new commits in `master` are relevant to the feature that you’re working on. To incorporate the new commits into your `feature` branch, you have two options: merging or rebasing.
 
@@ -38,7 +38,7 @@ git merge master feature
 
 This creates a new "merge commit" in the `feature` branch that ties together the histories of both branches, giving you a branch structure that looks like this:
 
-{% merging_master_into_the_feature_branch.svg "Merging master into the feature branch" %}
+{% asset_img merging_master_into_the_feature_branch.svg "Merging master into the feature branch" %}
 
 Merging is nice because it’s a *non-destructive* operation. The existing branches are not changed in any way. This avoids all of the potential pitfalls of rebasing (discussed below).
 
@@ -53,7 +53,7 @@ git rebase master
 
 This moves the entire `feature` branch to begin on the tip of the `master` branch, effectively incorporating all of the new commits in `master`. But, instead of using a merge commit, rebasing *re-writes* the project history by creating brand new commits for each commit in the original branch.
 
-{% rebasing_the_feature_branch_onto_master.svg "Rebasing the feature branch onto master" %}
+{% asset_img rebasing_the_feature_branch_onto_master.svg "Rebasing the feature branch onto master" %}
 
 The major benefit of rebasing is that you get a much cleaner project history. First, it eliminates the unnecessary merge commits required by `git merge`. Second, as you can see in the above diagram, rebasing also results in a perfectly linear project history—you can follow the tip of `feature` all the way to the beginning of the project without any forks. This makes it easier to navigate your project with commands like `git log`, `git bisect`, and `gitk`.
 
@@ -84,7 +84,7 @@ pick 5c67e61 Message for commit #3
 
 When you save and close the file, Git will perform the rebase according to your instructions, resulting in project history that looks like the following:
 
-{% squashing_a_commit_with_an_interactive_rebase.svg "Squashing a commit with an interactive rebase" %}
+{% asset_img squashing_a_commit_with_an_interactive_rebase.svg "Squashing a commit with an interactive rebase" %}
 
 Eliminating insignificant commits like this makes your feature’s history much easier to understand. This is something that `git merge` simply cannot do.
 
@@ -94,7 +94,7 @@ Once you understand what rebasing is, the most important thing to learn is when 
 
 For example, think about what would happen if you rebased `master` onto your `feature` branch:
 
-{% rebasing_the_master_branch.svg "Rebasing the master branch" %}
+{% asset_img rebasing_the_master_branch.svg "Rebasing the master branch" %}
 
 The rebase moves all of the commits in `master` onto the tip of `feature`. The problem is that this only happened in your repository. All of the other developers are still working with the original `master`. Since rebasing results in brand new commits, Git will think that your `master` branch’s history has diverged from everybody else’s.
 
@@ -118,7 +118,7 @@ Rebasing can be incorporated into your existing Git workflow as much or as littl
 
 The first step in any workflow that leverages `git rebase` is to create a dedicated branch for each feature. This gives you the necessary branch structure to safely utilize rebasing:
 
-{% developing_a_feature_in_a_dedicated_branch.svg "Developing a feature in a dedicated branch" %}
+{% asset_img developing_a_feature_in_a_dedicated_branch.svg "Developing a feature in a dedicated branch" %}
 
 ### Local Cleanup
 One of the best ways to incorporate rebasing into your workflow is to clean up local, in-progress features. By periodically performing an interactive rebase, you can make sure each commit in your feature is focused and meaningful. This lets you write your code without worrying about breaking it up into isolated commits—you can fix it up after the fact.
@@ -131,7 +131,7 @@ git rebase -i HEAD~3
 
 By specifying `HEAD~3` as the new base, you’re not actually moving the branch—you’re just interactively re-writing the 3 commits that follow it. Note that this will not incorporate upstream changes into the `feature` branch.
 
-{% rebasing_onto_head_3.svg "Rebasing onto HEAD~3" %}
+{% asset_img rebasing_onto_head_3.svg "Rebasing onto HEAD~3" %}
 
 If you want to re-write the entire feature using this method, the `git merge-base` command can be useful to find the original base of the `feature` branch. The following returns the commit ID of the original base, which you can then pass to `git rebase`:
 ```shell
@@ -153,11 +153,11 @@ Keep in mind that it’s perfectly legal to rebase onto a remote branch instead 
 
 For example, if you and another developer named John added commits to the `feature` branch, your repository might look like the following after fetching the remote `feature` branch from John’s repository:
 
-{% collaborating_on_the_same_feature_branch.svg "Collaborating on the same feature branch" %}
+{% asset_img collaborating_on_the_same_feature_branch.svg "Collaborating on the same feature branch" %}
 
 You can resolve this fork the exact same way as you integrate upstream changes from `master`: either merge your local `feature` with `john/feature`, or rebase your local `feature` onto the tip of `john/feature`.
 
-{% merging_vs_rebasing_onto_a_remote_branch.svg "Merging vs. rebasing onto a remote branch" %}
+{% asset_img merging_vs_rebasing_onto_a_remote_branch.svg "Merging vs. rebasing onto a remote branch" %}
 
 Note that this rebase doesn’t violate the Golden Rule of Rebasing because only your local `feature` commits are being moved—everything before that is untouched. This is like saying, “add my changes to what John has already done.” In most circumstances, this is more intuitive than synchronizing with the remote branch via a merge commit.
 
@@ -175,7 +175,7 @@ After a feature has been approved by your team, you have the option of rebasing 
 
 This is a similar situation to incorporating upstream changes into a feature branch, but since you’re not allowed to re-write commits in the `master` branch, you have to eventually use `git merge` to integrate the feature. However, by performing a rebase before the merge, you’re assured that the merge will be fast-forwarded, resulting in a perfectly linear history. This also gives you the chance to squash any follow-up commits added during a pull request.
 
-{% integrating_a_feature_into_master_with_and_without_a_rebase.svg "Integrating a feature into master with and without a rebase" %}
+{% asset_img integrating_a_feature_into_master_with_and_without_a_rebase.svg "Integrating a feature into master with and without a rebase" %}
 
 If you’re not entirely comfortable with `git rebase`, you can always perform the rebase in a temporary branch. That way, if you accidentally mess up your feature’s history, you can check out the original branch and try again. For example:
 ```shell
