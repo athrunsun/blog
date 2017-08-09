@@ -9,7 +9,7 @@
 #    target: _blank    是否跳出，省略则在当前页面打开
 menu:
   home:
-    text: 主页
+    text: Home
     url: /
   archives:
     url: /archives
@@ -19,26 +19,31 @@ menu:
     text: Categories
     url: /categories
   github:
-    url: https://github.com/yscoder
+    url: https://github.com/athrunsun
     target: _blank
   weibo:
-    url: http://www.weibo.com/ysweb
+    url: http://www.weibo.com/okampfer
     target: _blank
-  link:
-    text: 测试
-    url: /custom
+  stack-overflow:
+    text: bruce-sun
+    url: https://stackoverflow.com/users/1239295/bruce-sun
+    target: _blank
+  linkedin-square:
+    text: okampfer
+    url: https://www.linkedin.com/in/okampfer
+    target: _blank
 
 # 你的头像url
-avatar: /img/avatar.jpg
+avatar: /img/athrun-logo.png
 # avatar link
 avatar_link: /
 # 头像背景图
 brand: /img/brand.jpg
 # favicon
-favicon: /favicon.ico
+favicon: /img/athrun-logo.png
 
 # email
-email: 634206017@qq.com
+email: okampfer@gmail.com
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#3F51B5'
@@ -51,7 +56,7 @@ categories_title: Categories
 # 文章截断
 excerpt_render: false
 excerpt_length: 200
-excerpt_link: 阅读全文...
+excerpt_link: More...
 mathjax: false
 archive_yearly: true
 
@@ -62,10 +67,7 @@ show_last_updated: true
 share: true
 
 # 是否开启打赏，关闭 reward: false
-reward:
-  title: 谢谢大爷~
-  wechat: /img/wechat.jpg     #微信，关闭设为 false
-  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+reward: false
 
 # 是否开启搜索
 search: true
@@ -79,7 +81,7 @@ toc:
   list_number: true  # 是否显示数字排序
 
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
-postMessage: 这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
+#postMessage: 这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
 
 # 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
 cnzz: false
@@ -102,7 +104,7 @@ less:
 
 # 以下评论插件开启一个即可
 # 是否开启 disqus
-disqus_shortname: false
+disqus_shortname: okampfer
 # 是否开启友言评论, 填写友言用户id
 uyan_uid: false
 # 是否开启网易云跟帖， 填写app sdk中的app key
@@ -122,15 +124,15 @@ gitment: false
 canonical: false
 
 # 版权起始年份
-since_year: 2015
+since_year: 2016
 
 # 用户页面中作者相关的描述性文字，如不需要设为 false
-about: 用户页面中作者相关的描述性文字，如不需要设为 false
+about: false
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
-visit_counter:
-  site_uv: 站点总访客数：
-  site_pv: 站点总访问量：
+# visit_counter:
+#   site_uv: 站点总访客数：
+#   site_pv: 站点总访问量：
 
 # 动态定义title
 title_change:
@@ -138,10 +140,10 @@ title_change:
   leave: 死鬼去哪里了！
 
 # 设置为 true 发布后将使用 unpkg cdn
-cdn: true
+cdn: false
 
 # 设置为 true 将使用 lightbox render 图片
 lightbox: true
 
-# icp备案号  ICP_license: 京ICP备1234556号-1
+# icp备案号
 ICP_license: false

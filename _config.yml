@@ -4,7 +4,7 @@
 
 # Site
 title: Do It The Geek Way
-subtitle: Geek or Die
+subtitle: GEEK OR DIE
 description: 某无可救药的声优控
 keywords: geek
 author: Bruce Sun
@@ -13,8 +13,8 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://athrunsun.github.io/blog/
-#root: 
+url: https://athrunsun.github.io/
+#root:
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -102,6 +102,6 @@ jsonContent:
 
 disqus_shortname: okampfer
 
-search:
-  path: search.xml
-  field: post
+# search:
+#   path: search.xml
+#   field: post
