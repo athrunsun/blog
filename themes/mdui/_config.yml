@@ -4,16 +4,16 @@ location:
 # style
 style:
   scheme: 'now'
-  bg_img: /img/bg.png
-  avatar: /img/avatar.png
-  slogan: "I'm your slogan!"
+  #bg_img: /img/bg.png
+  avatar: /img/athrun-logo.png
+  slogan: "GEEK OR DIE!"
   hoverable: true
 
 # HTML head
 head:
-  favicon: /img/favicon.png
-  high_res_favicon: /img/favicon.png
-  apple_touch_icon: /img/favicon.png
+  favicon: /img/athrun-logo.png
+  high_res_favicon: /img/athrun-logo.png
+  apple_touch_icon: /img/athrun-logo.png
   keywords: blog, hexo, mdui
 
 # color
@@ -26,24 +26,24 @@ color:
 
 # appbar
 appbar:
-  title: "Title"
-  search: false
+  title: "GEEK OR DIE!"
+  search: true
 
 index:
-  welcome: "Welcome to my blog~"
+  welcome: "Did you GEEK today?"
   notification: false
 
 # post settings
 post:
   entry_excerpt: 80
-  qr_code: false
+  qr_code: true
   prism:
-    theme:
-    line_number:
+    theme: "solarizedlight"
+    line_number: true
   license:
     name: 'CC BY-NC-SA 4.0'
     link:  'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'
-  word_count:
+  word_count: true
   read_time:
   donate:
 #    wechat:
@@ -55,18 +55,18 @@ post:
 
 
 share_menu:
-#  rss: false
-#  weibo: false
-#  twitter: true
-#  facebook: true
-#  googleplus: true
-#  linkedin: true
-#  qq: false
-#  telegram: false
+ rss: true
+ weibo: true
+ twitter: true
+ facebook: true
+ googleplus: true
+ linkedin: true
+ qq: true
+ telegram: true
 
 comment:
-    use:
-    shortname:
+    use: disqus
+    shortname: okampfer
 
 # pagination
 # github@zllovesuki
@@ -74,7 +74,7 @@ pagination: 2
 
 # footer
 footer:
-  since:
+  since: 2016
   ICP:
   image:
 
@@ -90,7 +90,7 @@ about_me: false
 
 pace: false
 
-random_pics: 44
+random_pics: false
 
 pages:
 #  Test1:
@@ -114,12 +114,9 @@ pages:
 #        md: "home"
 
 sns:
-#  Twitter:
-#    link: https://twitter.com
-#    fa: 'fa-twitter'
-#  Facebook:
-#    link: https://facebook.com
-#    null_icon: true
+ Facebook:
+   link: https://facebook.com/okampfer
+   fa: 'fa-facebook'
 
 # Vendors
 vendors:
