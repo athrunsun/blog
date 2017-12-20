@@ -100,8 +100,6 @@ jsonContent:
     categories: false
     tags: true
 
-disqus_shortname: okampfer
-
 # search:
 #   path: search.xml
 #   field: post
