@@ -25,13 +25,16 @@ menu:
     url: http://www.weibo.com/okampfer
     target: _blank
   stack-overflow:
-    text: bruce-sun
+    text: StackOverflow
     url: https://stackoverflow.com/users/1239295/bruce-sun
     target: _blank
   linkedin-square:
-    text: okampfer
+    text: LinkedIn
     url: https://www.linkedin.com/in/okampfer
     target: _blank
+  paint-brush:
+    text: My Designs
+    url: /designs
 
 # 你的头像url
 avatar: /img/athrun-logo.png
