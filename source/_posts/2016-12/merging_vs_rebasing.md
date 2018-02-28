@@ -19,7 +19,7 @@ The first thing to understand about `git rebase` is that it solves the same prob
 
 Consider what happens when you start working on a new feature in a dedicated branch, then another team member updates the master branch with new commits. This results in a forked history, which should be familiar to anyone who has used Git as a collaboration tool.
 
-{% asset_img asset_img a_forked_commit_history.svg "A forked commit history" %}
+{% asset_img a_forked_commit_history.svg "A forked commit history" %}
 
 Now, let’s say that the new commits in `master` are relevant to the feature that you’re working on. To incorporate the new commits into your `feature` branch, you have two options: merging or rebasing.
 
