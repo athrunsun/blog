@@ -11,3 +11,5 @@ reward: false
 ![茶壶](index/茶壶.png)
 
 ![软包](index/软包.png)
+
+![花朵椅](index/花朵椅.png)
