@@ -35,13 +35,19 @@ menu:
   paint-brush:
     text: My Designs
     url: /designs
+  file:
+    text: CV (Chinese)
+    url: /cv/cv_chinese.html
+  file-alt:
+    text: CV (English)
+    url: /cv/cv_english.html
 
 # 你的头像url
 avatar: /img/athrun-logo.png
 # avatar link
 avatar_link: /
 # 头像背景图
-brand: /img/brand.jpg
+brand: /img/sakura_ayane.jpg
 # favicon
 favicon: /img/athrun-logo.png
 
