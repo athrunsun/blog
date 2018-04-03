@@ -1,5 +1,5 @@
 ---
-title: CV in English
+title: My Resume
 reward: false
 ---
 **Mr. Bruce Sun** | **Tel.** +86 15388178589 | **Email** okampfer@outlook.com

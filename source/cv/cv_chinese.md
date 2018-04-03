@@ -1,5 +1,5 @@
 ---
-title: CV in Chinese
+title: 个人简历
 reward: false
 ---
 **Mr. 孙思为** | **电话** +86 15388178589 | **电邮** okampfer@outlook.com
