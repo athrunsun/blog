@@ -35,6 +35,12 @@ menu:
   paint-brush:
     text: My Designs
     url: /designs
+  file-text:
+    text: 个人简历
+    url: /cv/cv_chinese.html
+  file-text-o:
+    text: Resume
+    url: /cv/cv_english.html
 
 # 你的头像url
 avatar: /img/athrun-logo.png
